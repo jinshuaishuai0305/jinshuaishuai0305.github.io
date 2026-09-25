@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="游志勇课题组论文、项目、专利、著作与荣誉成果。">
+  <meta name="theme-color" content="#070b14">
+  <title>研究成果 · 游志勇课题组</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="publications">
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <header class="site-header" id="site-header"></header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">首页</a><span>/</span><span>研究成果</span></div>
+        <p class="eyebrow">Publications & Projects</p>
+        <h1 class="page-title">从基础研究<br>到<span class="gradient-text">工程应用</span></h1>
+        <p class="lead">系统展示课题组在论文、项目、专利、著作与荣誉方面的研究成果。支持按类型筛选与关键词检索。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar reveal">
+          <div class="filter-group" id="pubFilters">
+            <button class="filter-btn is-active" type="button" data-filter="all">全部</button>
+            <button class="filter-btn" type="button" data-filter="paper">论文</button>
+            <button class="filter-btn" type="button" data-filter="project">项目</button>
+            <button class="filter-btn" type="button" data-filter="patent">专利</button>
+            <button class="filter-btn" type="button" data-filter="book">著作</button>
+            <button class="filter-btn" type="button" data-filter="award">荣誉</button>
+          </div>
+          <label class="search-box" aria-label="搜索研究成果">
+            <input id="pubSearch" type="search" placeholder="搜索论文、项目、专利或关键词">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          </label>
+        </div>
+        <div class="pub-list" id="pub-list"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+  <button class="back-to-top" id="backToTop" type="button" aria-label="回到顶部"></button>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
