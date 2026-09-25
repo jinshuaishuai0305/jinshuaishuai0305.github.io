@@ -377,6 +377,13 @@ window.SITE_DATA = {
 
   news: [
     {
+      date: "2026-08-07",
+      category: "学术活动",
+      title: "课题组师生赴香港参加 ICCES 大会",
+      summary: "2026 年 8 月 7 日至 12 日，课题组师生赴香港参加 ICCES 大会，与国内外学者开展学术交流并展示课题组最新研究进展。",
+      link: "publications.html"
+    },
+    {
       date: "2026-09-01",
       category: "科研进展",
       title: "课题组在 Mg-Zn-Ce 合金与 Mg-Zn 金属间化合物方向发表多篇论文",
@@ -442,6 +449,13 @@ window.SITE_DATA = {
   ],
 
   gallery: [
+    {
+      id: "icces-hongkong-2026",
+      src: "assets/img/gallery/thumbs/icces-hongkong-2026.jpg",
+      full: "assets/img/gallery/icces-hongkong-2026.jpg",
+      caption: "2026 年赴香港参加 ICCES 大会",
+      tag: "学术交流"
+    },
     {
       id: "graduation-group-2026",
       src: "assets/img/gallery/thumbs/graduation-group-2026.jpg",
