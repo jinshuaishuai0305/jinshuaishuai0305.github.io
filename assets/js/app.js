@@ -349,6 +349,73 @@
     initReveal();
   }
 
+  function renderGallery(container, limit) {
+    if (!container) return;
+    var items = DATA.gallery || [];
+    if (limit) items = items.slice(0, limit);
+    if (!items.length) return;
+
+    container.innerHTML = items.map(function (item, index) {
+      return '<button class="gallery-item reveal" type="button" data-full="' + item.full + '" data-caption="' + item.caption + '" style="transition-delay:' + (index * 70) + 'ms">' +
+        '<img src="' + item.src + '" alt="' + item.caption + '" loading="lazy">' +
+        '<span class="gallery-zoom" aria-hidden="true">⤢</span>' +
+        '<span class="gallery-caption"><span class="gallery-tag">' + item.tag + '</span><br>' + item.caption + '</span>' +
+      "</button>";
+    }).join("");
+
+    initReveal();
+  }
+
+  function initGallery() {
+    var box = qs("#galleryLightbox");
+    if (!box) {
+      box = document.createElement("div");
+      box.id = "galleryLightbox";
+      box.className = "lightbox";
+      box.setAttribute("role", "dialog");
+      box.setAttribute("aria-modal", "true");
+      box.setAttribute("aria-label", "图片预览");
+      box.innerHTML =
+        '<button class="lightbox-close" type="button" aria-label="关闭图片预览">×</button>' +
+        '<div style="text-align:center">' +
+          '<img src="" alt="">' +
+          '<p class="lightbox-caption"></p>' +
+        "</div>";
+      document.body.appendChild(box);
+    }
+
+    var image = qs("img", box);
+    var caption = qs(".lightbox-caption", box);
+
+    function close() {
+      box.classList.remove("is-open");
+      document.body.style.overflow = "";
+    }
+
+    function open(src, text, alt) {
+      image.src = src;
+      image.alt = alt || text || "";
+      caption.textContent = text || "";
+      box.classList.add("is-open");
+      document.body.style.overflow = "hidden";
+    }
+
+    box.addEventListener("click", function (event) {
+      if (event.target === box || event.target.closest(".lightbox-close")) close();
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") close();
+    });
+
+    document.addEventListener("click", function (event) {
+      var item = event.target.closest(".gallery-item");
+      if (!item) return;
+      event.preventDefault();
+      open(item.dataset.full, item.dataset.caption, item.dataset.caption);
+    });
+  }
+
   function renderTeamPage() {
     var piHolder = qs("#pi-card");
     var statsHolder = qs("#team-stats");
@@ -697,11 +764,14 @@
     initBackToTop();
     initTyping();
     initParticles();
+    initGallery();
     initContactForm();
 
     renderStats(qs("#home-stats"), DATA.stats);
     renderResearchCards(qs("#home-research"), 4);
     renderNewsCards(qs("#home-news"), 3);
+    renderGallery(qs("#home-gallery"), 3);
+    renderGallery(qs("#team-gallery"), 4);
     renderResearchCards(qs("#research-grid"));
     renderTeamPage();
     initPublicationsPage();

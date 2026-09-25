@@ -375,6 +375,30 @@ window.SITE_DATA = {
     }
   ],
 
+  gallery: [
+    {
+      id: "graduation-group-2026",
+      src: "assets/img/gallery/thumbs/graduation-group-2026.jpg",
+      full: "assets/img/gallery/graduation-group-2026.jpg",
+      caption: "2026 届课题组研究生毕业合照",
+      tag: "团队合影"
+    },
+    {
+      id: "graduation-five-2026",
+      src: "assets/img/gallery/thumbs/graduation-five-2026.jpg",
+      full: "assets/img/gallery/graduation-five-2026.jpg",
+      caption: "2026 届毕业研究生合影",
+      tag: "毕业留念"
+    },
+    {
+      id: "teachers-day-2026",
+      src: "assets/img/gallery/thumbs/teachers-day-2026.jpg",
+      full: "assets/img/gallery/teachers-day-2026.jpg",
+      caption: "2026 年教师节合影",
+      tag: "团队活动"
+    }
+  ],
+
   team: {
     pi: {
       name: "游志勇",
