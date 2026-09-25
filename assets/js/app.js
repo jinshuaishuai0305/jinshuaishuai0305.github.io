@@ -337,7 +337,7 @@
 
   function renderNewsCards(container, limit) {
     if (!container) return;
-    var items = (DATA.news || []).slice(0, limit || 3);
+    var items = (DATA.news || []).slice().sort(function (a, b) { return b.date.localeCompare(a.date); }).slice(0, limit || 3);
     container.innerHTML = items.map(function (item, index) {
       return '<article class="news-card reveal" style="transition-delay:' + (index * 70) + 'ms">' +
         '<div class="news-date">' + item.date + " · " + item.category + "</div>" +
@@ -540,6 +540,8 @@
       if (filter && filter !== "all" && item.category !== filter) return false;
       if (!query) return true;
       return (item.title + item.summary + item.category).toLowerCase().indexOf(query.toLowerCase()) !== -1;
+    }).sort(function (a, b) {
+      return b.date.localeCompare(a.date);
     });
 
     if (!items.length) {

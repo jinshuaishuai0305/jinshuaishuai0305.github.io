@@ -65,6 +65,51 @@ window.SITE_DATA = {
   publications: [
     {
       type: "paper",
+      year: 2026,
+      title: "First-principles study of elastic anisotropy and mechanical properties of high-pressure γ-ZrW2O8",
+      authors: "Jin, Shuaishuai; Guan, Zhong; You, Zhiyong; Li, Bing; Li, Hang",
+      venue: "Computational Condensed Matter, 48, e01409 · DOI: 10.1016/j.cocom.2026.e01409",
+      tags: ["γ-ZrW2O8", "第一性原理", "弹性各向异性"],
+      link: "https://doi.org/10.1016/j.cocom.2026.e01409"
+    },
+    {
+      type: "paper",
+      year: 2026,
+      title: "Study on Precipitation Behavior of Nanoscale Coherent Precipitates Induced by Semi-Solid Extrusion and Synergistic Effect on Strength-Ductility of Mg–Zn–Ce Alloys",
+      authors: "Jiang, Aoxue; You, Zhiyong; Wang, Kaiying; Sun, Chunle; Li, Manlin",
+      venue: "Journal of Materials Research and Technology, 44, 136-147 · DOI: 10.1016/j.jmrt.2026.07.236",
+      tags: ["Mg-Zn-Ce", "半固态挤压", "共格析出", "强韧协同"],
+      link: "https://doi.org/10.1016/j.jmrt.2026.07.236"
+    },
+    {
+      type: "paper",
+      year: 2026,
+      title: "Coherent Precipitation and Classified Quantitative Strengthening of T6-treated Semi-Solid Extruded Mg-Zn-Ce Alloy",
+      authors: "Aoxue, Jiang; Zhiyong, You; Kaiying, Wang; Chunle, Sun; Manlin, Li",
+      venue: "Journal of Alloys and Compounds, 1079, 189940 · DOI: 10.1016/j.jallcom.2026.189940",
+      tags: ["Mg-Zn-Ce", "T6 热处理", "共格析出", "定量强化"],
+      link: "https://doi.org/10.1016/j.jallcom.2026.189940"
+    },
+    {
+      type: "paper",
+      year: 2026,
+      title: "Understanding the Pressure-Induced Structural Evolution and Thermophysical Response of Mg–Zn Intermetallics via a Neuroevolution Potential",
+      authors: "You, Zhiyong; Jin, Shuaishuai; Han, Peide; Niu, Xiaofeng; Li, Hang",
+      venue: "Journal of Materials Research and Technology, 43, 1002-1012 · DOI: 10.1016/j.jmrt.2026.06.105",
+      tags: ["Mg-Zn 金属间化合物", "NEP 势函数", "高压结构演化"],
+      link: "https://doi.org/10.1016/j.jmrt.2026.06.105"
+    },
+    {
+      type: "paper",
+      year: 2025,
+      title: "Precipitate Evolution Behavior and Strengthening Mechanism in Ce-microalloyed Mg-Zn Alloy",
+      authors: "Aoxue, Jiang; Zhiyong, You; Kaiying, Wang; Chunle, Sun; Manlin, Li",
+      venue: "Journal of Alloys and Compounds, 1048, 185013 · DOI: 10.1016/j.jallcom.2025.185013",
+      tags: ["Mg-Zn 合金", "析出演化", "强化机制"],
+      link: "https://doi.org/10.1016/j.jallcom.2025.185013"
+    },
+    {
+      type: "paper",
       year: 2025,
       title: "Unveiling the origins of elastic anisotropy and thermodynamic stability in Mg-Zn alloy strengthening phases via first principles",
       authors: "You, Z., Jin, S., Han, P. et al.",
@@ -332,11 +377,32 @@ window.SITE_DATA = {
 
   news: [
     {
+      date: "2026-09-01",
+      category: "科研进展",
+      title: "课题组在 Mg-Zn-Ce 合金与 Mg-Zn 金属间化合物方向发表多篇论文",
+      summary: "近期，课题组围绕半固态挤压、T6 热处理、纳米共轭析出与 NEP 势函数等方向，在 Journal of Alloys and Compounds、Journal of Materials Research and Technology、Computational Condensed Matter 等期刊发表多篇论文。",
+      link: "publications.html"
+    },
+    {
+      date: "2026-06-05",
+      category: "工作动态",
+      title: "太原理工大学轻质材料及先进成形技术院士工作站正式授牌",
+      summary: "2026 年 6 月 3 日，在山西省全国科技工作者日主场活动中，太原理工大学轻质材料及先进成形技术院士工作站正式授牌。工作站引进陈蕴博院士团队，聚焦轻质材料及先进成形技术，推动产学研协同创新。",
+      link: ""
+    },
+    {
       date: "2026-04-24",
       category: "通知公告",
       title: "课题组网站全新改版上线",
       summary: "新版网站采用多页面结构与动态交互设计，系统展示研究方向、团队成员、研究成果与新闻动态。",
       link: "publications.html"
+    },
+    {
+      date: "2025-07-26",
+      category: "通知公告",
+      title: "校党委决定游志勇同志为国内交流合作办公室主任、校友工作办公室主任",
+      summary: "2025 年 7 月 23 日，校党委常委会研究决定，聘任游志勇同志为国内交流合作办公室主任、校友工作办公室主任。7 月 25 日，国内交流合作办公室（校友工作办公室）召开干部工作会议。",
+      link: ""
     },
     {
       date: "2025-04-15",
@@ -402,9 +468,9 @@ window.SITE_DATA = {
   team: {
     pi: {
       name: "游志勇",
-      role: "课题组负责人 · 副教授 · 硕士生导师",
+      role: "课题组负责人 · 副教授 · 硕士生导师 · 国内交流合作办公室主任",
       title: "工学博士 · 材料加工系",
-      bio: "1995 年本科毕业留校至今，一直从事教学和科研工作。主要围绕高强韧金属材料、轻质复合材料、镁铝合金及增材制造材料与工艺开展研究，主持和参与国家自然科学基金、山西省重点研发计划、中央引导地方科技发展资金及企业横向课题等项目。",
+      bio: "1995 年本科毕业留校至今，一直从事教学和科研工作。主要围绕高强韧金属材料、轻质复合材料、镁铝合金及增材制造材料与工艺开展研究，主持和参与国家自然科学基金、山西省重点研发计划、中央引导地方科技发展资金及企业横向课题等项目。现任太原理工大学国内交流合作办公室主任、校友工作办公室主任。",
       email: "youzhiy1486@163.com",
       phone: "",
       address: "山西省太原市 · 太原理工大学材料科学与工程学院",
@@ -413,6 +479,7 @@ window.SITE_DATA = {
         { label: "学历 / 学位", value: "博士研究生 / 工学博士" },
         { label: "导师类型", value: "硕士生导师" },
         { label: "所在系所", value: "材料加工系 · 材料成型及控制工程教研室" },
+        { label: "现任职务", value: "国内交流合作办公室主任、校友工作办公室主任" },
         { label: "学术兼职", value: "中国机械工程学会铸造分会理事等" },
         { label: "研究方向", value: "镁铝合金 · 轻质复合材料 · 球墨铸铁 · 增材制造" }
       ],
