@@ -42,6 +42,8 @@
 │   └── img/
 │       ├── favicon.svg
 │       ├── youzhiyong.png
+│       ├── books/
+│       │   └── *.jpg
 │       └── gallery/
 │           ├── *.jpg
 │           └── thumbs/*.jpg
@@ -93,7 +95,40 @@ assets/js/data.js
 }
 ```
 
-### 2.2 新增新闻
+### 2.2 新增著作（含封面）
+
+在 `books: [` 数组中添加；图书封面字段 `cover` 可选，填了就显示缩略图并可点击放大：
+
+```js
+{
+  type: "book",
+  year: 2025,
+  title: "《书名》",
+  authors: "游志勇 主编",          // 或 "游志勇 著" / "参与译著"
+  venue: "出版社，城市，年.月",
+  tags: ["增材制造", "教材", "主编"],
+  cover: "assets/img/books/english-name.jpg",   // 无封面则写 "" 或省略
+  link: ""
+}
+```
+
+封面图统一放在 `assets/img/books/`，用英文短横线命名（不要中文文件名），宽度压到 760、`mozjpeg` 质量 84：
+
+```bash
+cd /home/jss/share/jinshuaishuai0305.github.io
+node - <<'NODE'
+const sharp = require('/tmp/imgtools/node_modules/sharp');
+sharp('原始封面.png').flatten({ background: '#ffffff' })
+  .resize({ width: 760, withoutEnlargement: true })
+  .jpeg({ quality: 84, mozjpeg: true })
+  .toFile('assets/img/books/english-name.jpg')
+  .then(i => console.log(i.width + 'x' + i.height, Math.round(i.size / 1024) + 'KB'));
+NODE
+```
+
+`.pub-cover` 宽度固定 110px，桌面端在类型标签上方竖排，620px 以下与标签并排。点击封面走的是全局 lightbox（`app.js` 的 `initGallery()` 里绑定 `[data-full]`，不只是 `.gallery-item`）。
+
+### 2.3 新增新闻
 
 在 `news: [` 数组中添加：
 
@@ -118,7 +153,7 @@ assets/js/data.js
 
 `app.js` 会自动绑定筛选事件。
 
-### 2.3 新增照片
+### 2.4 新增照片
 
 1. 原图不要直接放进仓库提交。
 2. 压缩生成两份：
@@ -143,7 +178,7 @@ assets/img/gallery/thumbs/xxx.jpg   # 缩略图，最大边 900，质量 78
 首页默认展示 `gallery` 的前 3 项；团队页展示最多 4 项。  
 照片点击后会通过 `app.js` 中的 lightbox 放大。
 
-### 2.4 修改负责人信息
+### 2.5 修改负责人信息
 
 编辑 `data.js` 中的 `team.pi`：
 
@@ -159,7 +194,7 @@ assets/img/gallery/thumbs/xxx.jpg   # 缩略图，最大边 900，质量 78
 - `info-list`
 - `hero-actions`
 
-### 2.5 修改导航
+### 2.6 修改导航
 
 导航由 `assets/js/app.js` 顶部的 `NAV` 数组统一生成：
 
@@ -219,7 +254,7 @@ assets/css/style.css
 - 成果按年份分组渲染（`.pub-year-sep` 为年份分隔标题，`.pub-item` 不再显示右侧年份）
 - 成果筛选和搜索
 - 新闻筛选和搜索
-- 相册 lightbox
+- 相册与图书封面 lightbox（点击带 `data-full` 的元素放大）
 - 联系表单 `mailto:` 发送
 
 ---
@@ -361,13 +396,13 @@ https://jinshuaishuai0305.github.io/
 
 ## 7. 当前内容状态（2026-09-29）
 
-- 最新提交：`3f4ff75 Add ICCES conference photo and news`
+- 最新提交：`e958448 Add additive manufacturing textbook with book covers`
 - 页面：7 个
-- 成果总数：`96`
+- 成果总数：`97`
   - 论文：`60`（2026 年 8 篇 / 2025 年 12 篇 / 2024 年 7 篇 / 2023 年 5 篇 / 2021 年 4 篇 / 2020 年 3 篇，其余见 `data.js`）
   - 项目：`9`
   - 专利：`5`
-  - 著作：`3`
+  - 著作：`4`（2025《增材制造技术导论——原理与应用》游志勇 主编、2024《镁合金强韧化原理及技术》游志勇 著、2020 译著第十一章、2008《金属基复合材料制备及在力学环境中的作用》；前两本带封面图）
   - 荣誉：`19`
 - 新闻动态：`10` 条
 - 团队相册：`4` 张
@@ -388,12 +423,20 @@ https://jinshuaishuai0305.github.io/
 - 作者姓名已统一为「姓, 名」顺序（BibTeX 中 `Aoxue, Jiang; Zhiyong, You` 一类字段已纠正为 `Jiang, Aoxue; You, Zhiyong`）。
 - 40 条带 DOI 链接，其余中文期刊未查到 DOI 的条目 `link` 留空。
 
+### 著作数据说明
+
+- 2025 年 1 月北京理工大学出版社出版《增材制造技术导论——原理与应用》，游志勇任主编，2026-09-29 新增。
+- 同社 2024 年 4 月出版的《镁合金强韧化原理及技术》（封面实为「及技术」），此前误记为《镁合金强韧化原理与技术》，已按封面更正；作者信息由「北京理工大学出版社」更正为「游志勇 著」。
+- 两本图书封面由仓库根目录的原始 PNG（1654×2339）压缩为 `assets/img/books/` 下的 JPG（760×1075，46–59 KB）。
+
 ---
 
 ## 8. 更新日志
 
 ### 2026-09-29
 
+- 新增著作《增材制造技术导论——原理与应用》（游志勇 主编，北京理工大学出版社，2025.1），并按封面更正《镁合金强韧化原理及技术》书名与作者信息
+- 两本图书封面压缩入 `assets/img/books/`，`data.js` 的 `books` 增加 `cover` 字段；`app.js` 的 `renderPublications()` 在 `.pub-side` 中渲染封面缩略图（`.pub-cover`），lightbox 的点击代理由 `.gallery-item` 放宽为 `[data-full]`
 - 重建「研究成果 → 论文」：按课题组 Zotero BibTeX 汇总重写 `data.js` 的 `publications` 数组，论文由 14 篇补齐为 60 篇
 - `app.js` 的 `renderPublications()` 改为按年份倒序分组渲染，新增 `.pub-year-sep` 年份分隔标题（`style.css`）
 - `.pub-item` 改为两列栅格（去掉右侧年份列），同步调整 1080px / 620px 响应式规则

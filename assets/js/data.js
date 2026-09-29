@@ -740,20 +740,22 @@ window.SITE_DATA = {
   books: [
     {
       type: "book",
-      year: 2024,
-      title: "《镁合金强韧化原理与技术》",
-      authors: "北京理工大学出版社",
-      venue: "北京，2024.4",
-      tags: ["镁合金", "强韧化", "专著"],
+      year: 2025,
+      title: "《增材制造技术导论——原理与应用》",
+      authors: "游志勇 主编",
+      venue: "北京理工大学出版社，北京，2025.1",
+      tags: ["增材制造", "教材", "主编"],
+      cover: "assets/img/books/additive-manufacturing-introduction.jpg",
       link: ""
     },
     {
       type: "book",
-      year: 2008,
-      title: "《金属基复合材料制备及在力学环境中的作用》",
-      authors: "中国科学技术出版社",
-      venue: "北京，2008.12，第 250-378 页",
-      tags: ["金属基复合材料", "力学环境", "专著"],
+      year: 2024,
+      title: "《镁合金强韧化原理及技术》",
+      authors: "游志勇 著",
+      venue: "北京理工大学出版社，北京，2024.4",
+      tags: ["镁合金", "强韧化", "专著"],
+      cover: "assets/img/books/magnesium-alloy-strengthening.jpg",
       link: ""
     },
     {
@@ -763,6 +765,15 @@ window.SITE_DATA = {
       authors: "参与译著",
       venue: "3D 打印技术与应用",
       tags: ["3D 打印", "译著", "增材制造"],
+      link: ""
+    },
+    {
+      type: "book",
+      year: 2008,
+      title: "《金属基复合材料制备及在力学环境中的作用》",
+      authors: "中国科学技术出版社",
+      venue: "北京，2008.12，第 250-378 页",
+      tags: ["金属基复合材料", "力学环境", "专著"],
       link: ""
     }
   ],
@@ -849,8 +860,8 @@ window.SITE_DATA = {
     {
       date: "2024-05-08",
       category: "学术活动",
-      title: "《镁合金强韧化原理与技术》正式出版",
-      summary: "课题组参与撰写的《镁合金强韧化原理与技术》由北京理工大学出版社出版。",
+      title: "《镁合金强韧化原理及技术》正式出版",
+      summary: "游志勇所著《镁合金强韧化原理及技术》由北京理工大学出版社出版。",
       link: "publications.html"
     },
     {

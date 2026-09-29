@@ -409,7 +409,7 @@
     });
 
     document.addEventListener("click", function (event) {
-      var item = event.target.closest(".gallery-item");
+      var item = event.target.closest("[data-full]");
       if (!item) return;
       event.preventDefault();
       open(item.dataset.full, item.dataset.caption, item.dataset.caption);
@@ -494,7 +494,10 @@
       }
       var label = TYPE_LABEL[item.type] || "成果";
       html += '<article class="pub-item reveal" style="transition-delay:' + Math.min(index, 8) * 50 + 'ms">' +
-        '<div><span class="pub-type">' + label + "</span></div>" +
+        '<div class="pub-side">' +
+          (item.cover ? '<button class="pub-cover" type="button" data-full="' + item.cover + '" data-caption="' + item.title + '"><img src="' + item.cover + '" alt="' + item.title + ' 封面" loading="lazy"></button>' : "") +
+          '<span class="pub-type">' + label + "</span>" +
+        "</div>" +
         '<div class="pub-main">' +
           "<h3>" + item.title + "</h3>" +
           '<p class="pub-authors">' + item.authors + "</p>" +

@@ -1169,6 +1169,35 @@ button {
   white-space: nowrap;
 }
 
+.pub-side {
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+}
+
+.pub-cover {
+  width: 110px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: none;
+  box-shadow: var(--shadow-soft);
+  cursor: zoom-in;
+  transition: transform .35s var(--ease), border-color .35s var(--ease);
+}
+
+.pub-cover:hover {
+  transform: translateY(-3px);
+  border-color: rgba(91, 140, 255, .5);
+}
+
+.pub-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .pub-main { min-width: 0; }
 
 .pub-main h3 {
@@ -1597,6 +1626,7 @@ button {
   .footer-bottom { display: grid; }
   .notice-card { flex-direction: column; }
   .pub-item { grid-template-columns: 1fr; }
+  .pub-side { grid-auto-flow: column; align-items: center; justify-content: start; gap: 14px; }
   .timeline { padding-left: 24px; }
   .timeline-item::before { left: -24px; }
 }
