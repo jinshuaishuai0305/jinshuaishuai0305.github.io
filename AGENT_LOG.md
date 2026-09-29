@@ -76,6 +76,9 @@ assets/js/data.js
 
 ### 2.1 新增论文
 
+`publications` 数组当前共 **60 篇论文**，按年份从新到旧排列（年份相同时新论文放在前面）。
+`app.js` 的 `renderPublications()` 会再次按 `year` 倒序排序并自动插入年份分隔标题，因此数组顺序只影响同一年内的先后，新增论文建议插到对应年份的开头。
+
 在 `publications: [` 数组中添加：
 
 ```js
@@ -213,6 +216,7 @@ assets/css/style.css
 - 滚动渐入、数字动画
 - 粒子背景、打字机
 - 研究方向、团队、成果、新闻、相册动态渲染
+- 成果按年份分组渲染（`.pub-year-sep` 为年份分隔标题，`.pub-item` 不再显示右侧年份）
 - 成果筛选和搜索
 - 新闻筛选和搜索
 - 相册 lightbox
@@ -355,12 +359,12 @@ https://jinshuaishuai0305.github.io/
 
 ---
 
-## 7. 当前内容状态（2026-09-25）
+## 7. 当前内容状态（2026-09-29）
 
 - 最新提交：`3f4ff75 Add ICCES conference photo and news`
 - 页面：7 个
-- 成果总数：`50`
-  - 论文：`14`
+- 成果总数：`96`
+  - 论文：`60`（2026 年 8 篇 / 2025 年 12 篇 / 2024 年 7 篇 / 2023 年 5 篇 / 2021 年 4 篇 / 2020 年 3 篇，其余见 `data.js`）
   - 项目：`9`
   - 专利：`5`
   - 著作：`3`
@@ -376,9 +380,24 @@ https://jinshuaishuai0305.github.io/
   - 现任国内交流合作办公室主任
   - 校友工作办公室主任
 
+### 论文数据说明
+
+- 论文清单一轮重建于 2026-09-29，数据来源为课题组 Zotero 文献库导出的 BibTeX。
+- BibTeX 中 58 条记录，去掉 1 组中英文重复（蒋傲雪《固溶时效对半固态挤压 SiC/AZ91D 组织与性能的影响》，中英文同刊同卷同页，只保留 1 条）后为 57 条。
+- 另保留 3 篇 BibTeX 未收录但此前已上站的旧论文：2016 China Foundry（机械合金化颗粒增强铝基复合材料）、2014 China Foundry（Pr 对 AZ61 的影响）、2012 Applied Mechanics and Materials（半水石膏装备热耗）。如需与 BibTeX 完全一致可删除这 3 条。
+- 作者姓名已统一为「姓, 名」顺序（BibTeX 中 `Aoxue, Jiang; Zhiyong, You` 一类字段已纠正为 `Jiang, Aoxue; You, Zhiyong`）。
+- 40 条带 DOI 链接，其余中文期刊未查到 DOI 的条目 `link` 留空。
+
 ---
 
 ## 8. 更新日志
+
+### 2026-09-29
+
+- 重建「研究成果 → 论文」：按课题组 Zotero BibTeX 汇总重写 `data.js` 的 `publications` 数组，论文由 14 篇补齐为 60 篇
+- `app.js` 的 `renderPublications()` 改为按年份倒序分组渲染，新增 `.pub-year-sep` 年份分隔标题（`style.css`）
+- `.pub-item` 改为两列栅格（去掉右侧年份列），同步调整 1080px / 620px 响应式规则
+- 首页统计「发表论文」由 `60+` 改为精确值 `60`，`meta.updated` 更新为 2026 年 9 月
 
 ### 2026-09-25
 

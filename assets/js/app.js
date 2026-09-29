@@ -483,9 +483,17 @@
       return;
     }
 
-    listHolder.innerHTML = items.map(function (item, index) {
+    items.sort(function (a, b) { return (b.year || 0) - (a.year || 0); });
+
+    var html = "";
+    var currentYear = null;
+    items.forEach(function (item, index) {
+      if (item.year !== currentYear) {
+        currentYear = item.year;
+        html += '<h2 class="pub-year-sep"><span>' + currentYear + "</span></h2>";
+      }
       var label = TYPE_LABEL[item.type] || "成果";
-      return '<article class="pub-item reveal" style="transition-delay:' + Math.min(index, 8) * 50 + 'ms">' +
+      html += '<article class="pub-item reveal" style="transition-delay:' + Math.min(index, 8) * 50 + 'ms">' +
         '<div><span class="pub-type">' + label + "</span></div>" +
         '<div class="pub-main">' +
           "<h3>" + item.title + "</h3>" +
@@ -496,9 +504,10 @@
           }).join("") + "</div>" +
           (item.link ? '<a class="pub-link" href="' + item.link + '" target="_blank" rel="noopener">查看详情 →</a>' : "") +
         "</div>" +
-        '<div class="pub-year">' + item.year + "</div>" +
       "</article>";
-    }).join("");
+    });
+
+    listHolder.innerHTML = html;
 
     initReveal();
   }
