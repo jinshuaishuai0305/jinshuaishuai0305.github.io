@@ -396,7 +396,7 @@ https://jinshuaishuai0305.github.io/
 
 ## 7. 当前内容状态（2026-09-29）
 
-- 最新提交：`e958448 Add additive manufacturing textbook with book covers`
+- 最近一次内容提交：`bba1532 Add additive manufacturing textbook with book covers`
 - 页面：7 个
 - 成果总数：`97`
   - 论文：`60`（2026 年 8 篇 / 2025 年 12 篇 / 2024 年 7 篇 / 2023 年 5 篇 / 2021 年 4 篇 / 2020 年 3 篇，其余见 `data.js`）
