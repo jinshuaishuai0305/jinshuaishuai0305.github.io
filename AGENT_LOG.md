@@ -44,6 +44,8 @@
 │   └── img/
 │       ├── favicon.svg
 │       ├── youzhiyong.png
+│       ├── exchange/
+│       │   └── *.jpg
 │       ├── books/
 │       │   └── *.jpg
 │       └── gallery/
@@ -439,6 +441,7 @@ https://jinshuaishuai0305.github.io/
 
 ### 2026-09-29
 
+- 「对外开放」页补充 2026-08-10 08:00 报告现场照与报告信息（`assets/img/exchange/`），头条卡片改为上图下文 + 左题右信息版式，新增「报告现场」双图区
 - 新增「对外开放」页 `exchange.html`：ICCES 大会汇报（现场照片、报告题目、单位、关键词、结论要点）、国际期刊 5 篇代表作（影响因子 + DOI）、合作版图、开放共享时间线、合作邀请
 - 导航 `NAV` 增加 `{ id: "exchange", label: "对外开放", href: "exchange.html" }`（位于研究成果与新闻动态之间），全站页头/页脚自动同步
 - `data.js` 新增 `exchangeStats`，`init()` 增加 `renderStats(qs("#exchange-stats"), DATA.exchangeStats)`

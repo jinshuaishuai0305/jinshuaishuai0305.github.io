@@ -1802,11 +1802,12 @@ button.gallery-item {
   text-align: left;
   color: inherit;
 }
+
 /* ---------- exchange / international page ---------- */
 
 .talk-card {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 1fr;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
@@ -1814,7 +1815,10 @@ button.gallery-item {
   box-shadow: var(--shadow);
 }
 
-.talk-media { position: relative; min-height: 460px; }
+.talk-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+}
 
 .talk-media img {
   display: block;
@@ -1828,7 +1832,7 @@ button.gallery-item {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(90deg, rgba(7, 11, 20, .12), rgba(7, 11, 20, .5));
+  background: linear-gradient(180deg, rgba(7, 11, 20, .28), rgba(7, 11, 20, .06) 42%, rgba(7, 11, 20, .62));
 }
 
 .talk-badge {
@@ -1851,28 +1855,29 @@ button.gallery-item {
 
 .talk-caption {
   position: absolute;
-  right: 20px;
+  right: 22px;
   bottom: 18px;
-  left: 20px;
+  left: 22px;
   z-index: 2;
-  color: rgba(255, 255, 255, .84);
+  color: rgba(255, 255, 255, .88);
   font-size: .78rem;
 }
 
 .talk-body {
-  display: flex;
-  flex-direction: column;
-  padding: clamp(26px, 3.2vw, 46px);
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: clamp(24px, 4vw, 56px);
+  padding: clamp(26px, 3.4vw, 48px);
 }
 
 .talk-body .eyebrow { margin-bottom: 14px; }
 
 .talk-title {
-  margin: 0 0 14px;
+  margin: 0 0 16px;
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 2.1vw, 2rem);
+  font-size: clamp(1.45rem, 2.1vw, 2.05rem);
   font-weight: 600;
-  line-height: 1.22;
+  line-height: 1.24;
   letter-spacing: -.01em;
 }
 
@@ -1907,10 +1912,38 @@ button.gallery-item {
   letter-spacing: .03em;
 }
 
+.talk-meta {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 20px;
+}
+
+.talk-meta div {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--line);
+}
+
+.talk-meta dt {
+  min-width: 62px;
+  color: var(--muted);
+  font-size: .72rem;
+  letter-spacing: .1em;
+}
+
+.talk-meta dd {
+  margin: 0;
+  color: var(--text);
+  font-size: .9rem;
+  font-weight: 600;
+}
+
 .talk-facts {
   display: grid;
   gap: 10px;
-  margin: 20px 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -1919,7 +1952,7 @@ button.gallery-item {
   position: relative;
   padding-left: 18px;
   color: var(--text-soft);
-  font-size: .88rem;
+  font-size: .86rem;
   line-height: 1.65;
 }
 
@@ -1937,7 +1970,55 @@ button.gallery-item {
 .talk-note {
   margin: 18px 0 0;
   color: var(--muted);
-  font-size: .76rem;
+  font-size: .74rem;
+  line-height: 1.5;
+}
+
+.report-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.report-shot {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.report-shot img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform .8s var(--ease);
+}
+
+.report-shot:hover img { transform: scale(1.04); }
+
+.report-shot[data-full] { cursor: zoom-in; }
+
+.report-shot figcaption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 18px 20px;
+  background: linear-gradient(to top, rgba(7, 11, 20, .88), transparent);
+  color: #fff;
+  font-size: .8rem;
+}
+
+.report-shot figcaption span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--gold);
+  font-size: .64rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
 }
 
 .paper-list { display: grid; gap: 12px; }
@@ -2023,11 +2104,12 @@ button.gallery-item {
 }
 
 @media (max-width: 960px) {
-  .talk-card { grid-template-columns: 1fr; }
-  .talk-media { min-height: 300px; }
+  .talk-body { grid-template-columns: 1fr; }
+  .report-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 620px) {
   .paper-row { grid-template-columns: 1fr auto; gap: 14px; padding: 18px 20px; }
   .paper-index { display: none; }
+  .talk-caption { right: 16px; bottom: 14px; left: 16px; font-size: .72rem; }
 }
