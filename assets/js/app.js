@@ -503,6 +503,11 @@
           "<h3>" + item.title + "</h3>" +
           '<p class="pub-authors">' + item.authors + "</p>" +
           '<p class="pub-authors">' + item.venue + "</p>" +
+          (item.grade || item.category
+            ? '<p class="pub-extra">' +
+                [item.grade ? "项目分级：" + item.grade : "", item.category ? "项目类型：" + item.category : ""].filter(Boolean).join(" · ") +
+              "</p>"
+            : "") +
           '<div class="pub-meta">' +
             (item.nature ? '<span class="tag tag-meta">' + item.nature + "</span>" : "") +
             (item.level ? '<span class="tag tag-meta">' + item.level + "</span>" : "") +
