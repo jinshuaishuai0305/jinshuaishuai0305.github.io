@@ -442,6 +442,7 @@ https://jinshuaishuai0305.github.io/
 ### 2026-09-29
 
 - 「对外开放」页补充 2026-08-10 08:00 报告现场照与报告信息（`assets/img/exchange/`），头条卡片改为上图下文 + 左题右信息版式，新增「报告现场」双图区
+- 4 份荣誉证书转为 PNG 并上站：`assets/img/certs/`（meicc-2025-first-prize / meicc-2025-excellent-instructor / shanxi-foundry-award-2020 / journal-editor-award-2024，1200px 宽、palette PNG，336–771 KB），awards 条目增加 `cover` 字段，复用 `.pub-cover` 缩略图 + 全站灯箱（点击放大）；证书原件 PDF 不入库
 - 荣誉新增 3 项（2025 年中国大学生机械工程创新创意大赛一等奖指导教师、2020 年山西省铸造行业创新技术成果奖、2024 年度《特种铸造及有色合金》卓越贡献编委），荣誉总数 19 → 22 → 23（补入 2025 铸造工艺设计赛优秀指导教师奖），成果总数 97 → 101；奖项信息按证书原件录入（发证单位、日期、作品/成果名称）
 - 新增「对外开放」页 `exchange.html`：ICCES 大会汇报（现场照片、报告题目、单位、关键词、结论要点）、国际期刊 5 篇代表作（影响因子 + DOI）、合作版图、开放共享时间线、合作邀请
 - 导航 `NAV` 增加 `{ id: "exchange", label: "对外开放", href: "exchange.html" }`（位于研究成果与新闻动态之间），全站页头/页脚自动同步
