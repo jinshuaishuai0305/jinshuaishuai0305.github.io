@@ -786,9 +786,12 @@ window.SITE_DATA = {
   ],
 
   awards: [
+    { type: "award", year: 2025, title: "2025 年中国大学生机械工程创新创意大赛一等奖（指导教师）", authors: "中国机械工程学会", venue: "2025 年 7 月 10 日 · 铸造工艺设计赛 · 本科生组 · 作品“C件—导向连接体”", tags: ["国家级竞赛", "指导教师", "铸造工艺"], link: "" },
     { type: "award", year: 2024, title: "校“三育人”先进个人", authors: "太原理工大学", venue: "2024 年", tags: ["校级荣誉"], link: "" },
+    { type: "award", year: 2024, title: "《特种铸造及有色合金》2024 年度卓越贡献编委", authors: "《特种铸造及有色合金》杂志社", venue: "2024 年度（2025 年 8 月 9 日颁授）", tags: ["期刊编委", "学术服务"], link: "" },
     { type: "award", year: 2022, title: "校庆工作先进个人", authors: "太原理工大学", venue: "2022 年", tags: ["校级荣誉"], link: "" },
     { type: "award", year: 2021, title: "山西省机械工程学会先进个人", authors: "山西省机械工程学会", venue: "2021 年", tags: ["学会荣誉"], link: "" },
+    { type: "award", year: 2020, title: "山西省铸造行业创新技术成果奖", authors: "山西省铸造行业协会、山西省机械工程学会铸造专业委员会", venue: "2020 年 10 月 · 成果：高强韧低成本新型铝/镁合金研发及半固态挤压铸造关键技术产品", tags: ["行业奖项", "半固态挤压铸造"], link: "" },
     { type: "award", year: 2019, title: "中国老科技工作者协会成立 30 周年先进个人", authors: "中国老科技工作者协会", venue: "2019 年", tags: ["协会荣誉"], link: "" },
     { type: "award", year: 2019, title: "山西省机械工程学会先进个人", authors: "山西省机械工程学会", venue: "2019 年", tags: ["学会荣誉"], link: "" },
     { type: "award", year: 2013, title: "山西省机械工程学会先进个人", authors: "山西省机械工程学会", venue: "2013 年", tags: ["学会荣誉"], link: "" },
