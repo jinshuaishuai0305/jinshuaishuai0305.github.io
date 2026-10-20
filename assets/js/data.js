@@ -775,17 +775,19 @@ window.SITE_DATA = {
       year: 2024,
       title: "一种 Cu 和 Sb 联合原位自生的组织优化镁基复合材料及其制备方法",
       authors: "游志勇; 张金山",
-      venue: "中国 · CN202211327726.7 · 2024-01-12",
-      tags: ["镁基复合材料", "原位自生", "组织优化"],
+      venue: "中国发明专利 · ZL 2022 1 1327726.7（授权公告号 CN 115874099 B）· 授权 2024-01-12 · 证书号 6621058 · 专利权人：太原理工大学",
+      tags: ["镁基复合材料", "原位自生", "已转化 30 万元"],
+      cover: "assets/img/patents/cn-cu-sb-composite-2024.png",
       link: ""
     },
     {
       type: "patent",
       year: 2023,
       title: "PREPARATION METHOD OF MAGNESIUM MATRIX COMPOSITE REINFORCED WITH SILICON CARBIDE PARTICLES",
-      authors: "You Zhiyong; Jiang Aoxue",
-      venue: "美国 · US 11788172 · 2023-10-17",
-      tags: ["SiC 颗粒", "镁基复合材料", "美国专利"],
+      authors: "You, Zhiyong; Jiang, Aoxue",
+      venue: "美国发明专利 · US 11,788,172 B1 · 申请 2023-05-12（Appl. No. 18/316,300）· 授权 2023-10-17 · 专利权人：Taiyuan University of Technology",
+      tags: ["SiC 颗粒", "镁基复合材料", "美国专利", "未转化"],
+      cover: "assets/img/patents/us-sic-composite-2023.png",
       link: ""
     },
     {
@@ -793,8 +795,9 @@ window.SITE_DATA = {
       year: 2023,
       title: "一种高阻尼镁合金的制备方法",
       authors: "游志勇; 高晶磊; 蒋傲雪",
-      venue: "中国 · CN202211265931.5 · 2023-07-25",
-      tags: ["高阻尼", "镁合金", "制备方法"],
+      venue: "中国发明专利 · ZL 2022 1 1265931.5（授权公告号 CN 115595520 B）· 授权 2023-07-25 · 证书号 6173284 · 专利权人：太原理工大学",
+      tags: ["高阻尼镁合金", "制备方法", "未转化"],
+      cover: "assets/img/patents/cn-high-damping-2023.png",
       link: ""
     },
     {
@@ -802,17 +805,19 @@ window.SITE_DATA = {
       year: 2023,
       title: "一种 SiC 颗粒增强镁基复合材料的制备方法",
       authors: "蒋傲雪; 游志勇; 王开鹰",
-      venue: "中国 · CN202211188438.8 · 2023-03-21",
-      tags: ["SiC 颗粒", "镁基复合材料", "制备方法"],
+      venue: "中国发明专利 · ZL 2022 1 1188438.8（授权公告号 CN 115491568 B）· 授权 2023-03-21 · 证书号 5797906 · 专利权人：太原理工大学",
+      tags: ["SiC 颗粒", "镁基复合材料", "已转化 10 万元"],
+      cover: "assets/img/patents/cn-sic-composite-2023.png",
       link: ""
     },
     {
       type: "patent",
       year: 2020,
-      title: "A casting copper mould for increasing the content of authigenic quasicrystal in Mg-Zn-Al alloy",
-      authors: "You, Zhiyong; Zhang, Tuo; Gao, Jinglei; et al.",
-      venue: "澳大利亚 · AU 2020102491 · 2020-09-29",
-      tags: ["Mg-Zn-Al", "准晶", "铸造铜模"],
+      title: "A casting copper mould for increasing the content of authigenic quasicrystal in Mg-Zn-All alloy",
+      authors: "You, Zhiyong; Zhang, Tuo; Gao, Jinglei; Jiang, Aoxue; Zhang, Jinshan",
+      venue: "澳大利亚创新专利 · AU 2020102491 · 申请 2020-09-29 · 授权 2020-11-04 · 专利权人：Taiyuan University of Technology",
+      tags: ["Mg-Zn-Al", "准晶", "铸造铜模", "未转化"],
+      cover: "assets/img/patents/au-copper-mould-2020.png",
       link: ""
     }
   ],
