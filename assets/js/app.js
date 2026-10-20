@@ -587,7 +587,7 @@
         '<div class="news-meta"><span class="news-category">' + item.category + "</span><span>" + item.date + "</span></div>" +
         "<h3>" + item.title + "</h3>" +
         "<p>" + item.summary + "</p>" +
-        (item.link ? '<a class="pub-link" href="' + item.link + '">相关链接 →</a>' : "") +
+        (item.link ? '<a class="pub-link" href="' + item.link + '"' + (/^https?:/i.test(item.link) ? ' target="_blank" rel="noopener"' : "") + '>相关链接 →</a>' : "") +
       "</article>";
     }).join("");
 
