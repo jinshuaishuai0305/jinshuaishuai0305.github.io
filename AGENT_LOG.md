@@ -21,6 +21,7 @@
 | 团队成员 | `team.html` | 负责人、工作经历时间线、团队数据、研究小组、团队风采 |
 | 研究成果 | `publications.html` | 论文、项目、专利、著作、荣誉，支持筛选搜索 |
 | 对外开放 | `exchange.html` | 国际会议汇报（ICCES）、国际期刊代表作、合作版图、开放共享 |
+| 申报通知 | `notices.html` | 自动抓取的山西省科技厅申报通知，年份筛选 + 搜索 |
 | 新闻动态 | `news.html` | 新闻中心、工作动态、通知公告、学术活动 |
 | 加入我们 / 联系 | `contact.html` | 联系方式、咨询表单、招生合作 |
 | 404 | `404.html` | 自定义 404 |
@@ -36,10 +37,12 @@
 ├── exchange.html
 ├── news.html
 ├── contact.html
+├── notices.html
 ├── 404.html
 ├── assets/
 │   ├── css/style.css
 │   ├── js/data.js
+│   ├── js/notices.js
 │   ├── js/app.js
 │   └── img/
 │       ├── favicon.svg
@@ -265,6 +268,10 @@ assets/css/style.css
 #exchange-stats
 #pubSearch
 #pub-list
+#noticeUpdated
+#notice-list
+#noticeSearch
+#noticeFilters
 #newsFilters
 #newsSearch
 #news-list
@@ -284,6 +291,7 @@ assets/css/style.css
 - 成果按年份分组渲染（`.pub-year-sep` 为年份分隔标题，`.pub-item` 不再显示右侧年份）
 - 对外开放页数据条渲染（`#exchange-stats` ← `DATA.exchangeStats`）
 - 成果筛选和搜索
+- 申报通知页渲染（`window.SITE_NOTICES` ← `assets/js/notices.js`）：年份筛选 + 关键词搜索 + 外链新窗口
 - 新闻筛选和搜索
 - 相册与图书封面 lightbox（点击带 `data-full` 的元素放大）
 - 联系表单 `mailto:` 发送
@@ -428,7 +436,7 @@ https://jinshuaishuai0305.github.io/
 ## 7. 当前内容状态（2026-09-29）
 
 - 最近一次内容提交：`bba1532 Add additive manufacturing textbook with book covers`
-- 页面：8 个
+- 页面：9 个
 - 成果总数：`106`
   - 论文：`60`（2026 年 8 篇 / 2025 年 12 篇 / 2024 年 7 篇 / 2023 年 5 篇 / 2021 年 4 篇 / 2020 年 3 篇，其余见 `data.js`）
   - 项目：`14`（含 5 项横向与院士工作站，均带「项目性质 / 项目级别」字段）
@@ -468,6 +476,7 @@ https://jinshuaishuai0305.github.io/
 
 - 「对外开放」页补充 2026-08-10 08:00 报告现场照与报告信息（`assets/img/exchange/`），头条卡片改为上图下文 + 左题右信息版式，新增「报告现场」双图区
 - 删除与新转载重复的一条旧新闻（2026-06-05 院士工作站正式授牌，原无链接版），保留带 tyut.edu.cn 原文链接的版本，新闻 16 → 15 条
+- 新增「申报通知」页 `notices.html`：读取 `assets/js/notices.js`（41 条，抓自山西省科技厅），支持年份筛选与标题搜索、外链新窗口打开；导航增加「申报通知」（位于对外开放与新闻动态之间），「加入我们 / 联系」精简为「联系我们」以腾出导航宽度；sitemap 与 .gitignore 同步
 - 新闻动态新增 6 条校外来源条目（院士工作站授牌/首次学术研讨会、赴清华与武汉调研、7·23 任职决定、数学学院党委书记交接），均带原文链接并在 summary 末尾标注来源；renderNewsTimeline 对外链自动加 target=_blank + rel=noopener
 - 团队成员页新增「工作经历」时间线（`#pi-career` ← `DATA.team.pi.career`，10 段）：1995 年自动化系政治辅导员 → 信息工程学院团委副书记 → 材料学院党委副书记 → 离退休管理处副处长/处长 → 数学学院党委书记 → 材料学院党委书记（至 2026.03.04）→ 2025.07.23 起国内交流合作办公室主任；校党委委员（2021.09 起，标注「兼任」）；同步更新 PI 角色行、简介、职称/学位时间点与首页 PI 卡片
 - 项目卡片新增分级/类型小字行（app.js 渲染 `.pub-extra`，样式在 style.css）：显示「项目分级：自然科学 B1 类 · 项目类型：省重点研发计划」，无该字段的条目自动隐藏

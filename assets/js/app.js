@@ -13,8 +13,9 @@
     { id: "team", label: "团队成员", href: "team.html" },
     { id: "publications", label: "研究成果", href: "publications.html" },
     { id: "exchange", label: "对外开放", href: "exchange.html" },
+    { id: "notices", label: "申报通知", href: "notices.html" },
     { id: "news", label: "新闻动态", href: "news.html" },
-    { id: "contact", label: "加入我们 / 联系", href: "contact.html" }
+    { id: "contact", label: "联系我们", href: "contact.html" }
   ];
 
   var TYPE_LABEL = {
@@ -567,6 +568,84 @@
     update();
   }
 
+  function initNoticesPage() {
+    var listHolder = qs("#notice-list");
+    if (!listHolder) return;
+
+    var data = window.SITE_NOTICES || { items: [] };
+    var items = data.items || [];
+    var updated = qs("#noticeUpdated");
+    if (updated) updated.textContent = data.updated || "—";
+
+    var filterHolder = qs("#noticeFilters");
+    var search = qs("#noticeSearch");
+    var years = [];
+    items.forEach(function (item) {
+      var y = (item.date || "").slice(0, 4);
+      if (y && years.indexOf(y) === -1) years.push(y);
+    });
+    years.sort().reverse();
+
+    var activeYear = "all";
+    var query = "";
+
+    if (filterHolder) {
+      years.forEach(function (y) {
+        var btn = document.createElement("button");
+        btn.className = "filter-btn";
+        btn.type = "button";
+        btn.dataset.filter = y;
+        btn.textContent = y;
+        filterHolder.appendChild(btn);
+      });
+      filterHolder.addEventListener("click", function (event) {
+        var btn = event.target.closest(".filter-btn");
+        if (!btn) return;
+        activeYear = btn.dataset.filter || "all";
+        qsa(".filter-btn", filterHolder).forEach(function (b) {
+          b.classList.toggle("is-active", b === btn);
+        });
+        render();
+      });
+    }
+
+    if (search) {
+      search.addEventListener("input", function () {
+        query = search.value.trim().toLowerCase();
+        render();
+      });
+    }
+
+    function render() {
+      var list = items.filter(function (item) {
+        if (activeYear !== "all" && (item.date || "").slice(0, 4) !== activeYear) return false;
+        if (!query) return true;
+        return (item.title + " " + (item.source || "")).toLowerCase().indexOf(query) !== -1;
+      });
+
+      if (!list.length) {
+        listHolder.innerHTML = '<div class="empty-state">没有匹配的申报通知，换个关键词或年份试试。</div>';
+        return;
+      }
+
+      listHolder.innerHTML =
+        '<p class="notice-count">共 ' + list.length + ' 条</p>' +
+        list.map(function (item, index) {
+          return '<article class="notice-row reveal" style="transition-delay:' + Math.min(index, 8) * 40 + 'ms">' +
+            '<span class="notice-date">' + (item.date || "—") + "</span>" +
+            '<div class="notice-main">' +
+              '<h3><a href="' + item.url + '" target="_blank" rel="noopener">' + item.title + "</a></h3>" +
+              '<p class="notice-source">' + (item.source || "山西省科学技术厅") + "</p>" +
+            "</div>" +
+            '<span class="notice-arrow" aria-hidden="true">↗</span>' +
+          "</article>";
+        }).join("");
+      initReveal();
+    }
+
+    render();
+  }
+
   function renderNewsTimeline(container, filter, query) {
     if (!container) return;
     var items = (DATA.news || []).filter(function (item) {
@@ -812,6 +891,7 @@
     renderTeamPage();
     initPublicationsPage();
     initNewsPage();
+    initNoticesPage();
 
     initReveal();
 
