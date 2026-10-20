@@ -81,6 +81,15 @@ window.SITE_DATA = {
     {
       type: "paper",
       year: 2026,
+      title: "First-principles insights into the thermodynamic and mechanical behavior of the β-phase in Mg–Zn alloys: unveiling the underlying mechanisms",
+      authors: "Sun, Chunle; You, Zhiyong; Han, Peide; Jiang, Aoxue; Jin, Shuaishuai",
+      venue: "Bulletin of Materials Science, 49(4), 226 · DOI: 10.1007/s12034-026-03737-x",
+      tags: ["Mg-Zn 合金", "β 相", "弹性各向异性", "第一性原理"],
+      link: "https://doi.org/10.1007/s12034-026-03737-x"
+    },
+    {
+      type: "paper",
+      year: 2026,
       title: "First-principles study of elastic anisotropy and mechanical properties of high-pressure γ-ZrW2O8",
       authors: "Jin, Shuaishuai; Guan, Zhong; You, Zhiyong; Li, Bing; Li, Hang",
       venue: "Computational Condensed Matter, 48, e01409 · DOI: 10.1016/j.cocom.2026.e01409",
@@ -643,6 +652,19 @@ window.SITE_DATA = {
       authors: "校企合作科研项目",
       venue: "2025.04—2027.04，40 万元，在研，主持",
       tags: ["快速凝固", "锰铁合金", "微观组织"],
+      grade: "自然科学D类",
+      category: "横向",
+      link: ""
+    },
+    {
+      type: "project",
+      year: 2025,
+      title: "一种 Cu 和 Sb 联合原位自生的组织优化镁基复合材料及其制备方法",
+      nature: "科研横向",
+      level: "",
+      authors: "山西韶泽装备（集团）有限公司",
+      venue: "2025 年起，30 万元，在研，负责人",
+      tags: ["成果转化", "镁基复合材料", "横向课题"],
       grade: "自然科学D类",
       category: "横向",
       link: ""
