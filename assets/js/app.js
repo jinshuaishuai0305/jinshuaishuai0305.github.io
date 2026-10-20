@@ -469,7 +469,7 @@
   function publicationMatches(item, filter, query) {
     if (filter !== "all" && item.type !== filter) return false;
     if (!query) return true;
-    var haystack = [item.title, item.authors, item.venue, (item.tags || []).join(" ")].join(" ").toLowerCase();
+    var haystack = [item.title, item.authors, item.venue, item.nature, item.level, (item.tags || []).join(" ")].join(" ").toLowerCase();
     return haystack.indexOf(query.toLowerCase()) !== -1;
   }
 
@@ -503,9 +503,13 @@
           "<h3>" + item.title + "</h3>" +
           '<p class="pub-authors">' + item.authors + "</p>" +
           '<p class="pub-authors">' + item.venue + "</p>" +
-          '<div class="pub-meta">' + (item.tags || []).map(function (tag) {
-            return '<span class="tag">' + tag + "</span>";
-          }).join("") + "</div>" +
+          '<div class="pub-meta">' +
+            (item.nature ? '<span class="tag tag-meta">' + item.nature + "</span>" : "") +
+            (item.level ? '<span class="tag tag-meta">' + item.level + "</span>" : "") +
+            (item.tags || []).map(function (tag) {
+              return '<span class="tag">' + tag + "</span>";
+            }).join("") +
+          "</div>" +
           (item.link ? '<a class="pub-link" href="' + item.link + '" target="_blank" rel="noopener">查看详情 →</a>' : "") +
         "</div>" +
       "</article>";
