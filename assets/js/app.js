@@ -438,6 +438,17 @@
         "</div>";
     }
 
+    var careerHolder = qs("#pi-career");
+    if (careerHolder) {
+      careerHolder.innerHTML = (pi.career || []).map(function (item, index) {
+        return '<article class="timeline-item reveal" style="transition-delay:' + Math.min(index, 6) * 50 + 'ms">' +
+          '<p class="career-period">' + item.period + "</p>" +
+          "<h3>" + item.role + "</h3>" +
+          (item.note ? '<p class="career-note">' + item.note + "</p>" : "") +
+        "</article>";
+      }).join("");
+    }
+
     if (statsHolder) renderStats(statsHolder, DATA.team.stats);
 
     if (groupsHolder) {
