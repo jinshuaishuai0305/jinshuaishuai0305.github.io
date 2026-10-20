@@ -904,6 +904,7 @@ window.SITE_DATA = {
     { type: "award", year: 2025, title: "2025 年中国大学生机械工程创新创意大赛铸造工艺设计赛优秀指导教师奖", authors: "铸造工艺设计赛执行委员会、中国机械工程学会铸造分会（代章）", venue: "2025 年 7 月 · 指导太原理工大学参赛团队成绩优异", tags: ["国家级竞赛", "优秀指导教师"], cover: "assets/img/certs/meicc-2025-excellent-instructor.png", link: "" },
     { type: "award", year: 2024, title: "校“三育人”先进个人", authors: "太原理工大学", venue: "2024 年", tags: ["校级荣誉"], link: "" },
     { type: "award", year: 2024, title: "《特种铸造及有色合金》2024 年度卓越贡献编委", authors: "《特种铸造及有色合金》杂志社", venue: "2024 年度（2025 年 8 月 9 日颁授）", tags: ["期刊编委", "学术服务"], cover: "assets/img/certs/journal-editor-award-2024.png", link: "" },
+    { type: "award", year: 2023, title: "吕梁市—太原理工大学企业科技特派员项目（第一期）金牌特派员", authors: "中共吕梁市委人才工作领导小组办公室", venue: "2023 年 12 月", tags: ["科技特派员", "市级荣誉", "人才项目"], cover: "assets/img/certs/lvliang-gold-commissioner-2023.png", link: "" },
     { type: "award", year: 2022, title: "校庆工作先进个人", authors: "太原理工大学", venue: "2022 年", tags: ["校级荣誉"], link: "" },
     { type: "award", year: 2021, title: "山西省机械工程学会先进个人", authors: "山西省机械工程学会", venue: "2021 年", tags: ["学会荣誉"], link: "" },
     { type: "award", year: 2020, title: "山西省铸造行业创新技术成果奖", authors: "山西省铸造行业协会、山西省机械工程学会铸造专业委员会", venue: "2020 年 10 月 · 成果：高强韧低成本新型铝/镁合金研发及半固态挤压铸造关键技术产品", tags: ["行业奖项", "半固态挤压铸造"], cover: "assets/img/certs/shanxi-foundry-award-2020.png", link: "" },
