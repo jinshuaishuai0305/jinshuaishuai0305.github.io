@@ -26,6 +26,14 @@ window.SITE_DATA = {
     { value: 4, suffix: "项", label: "产学研合作项目" }
   ],
 
+  quickLinks: [
+    { name: "智慧校园", desc: "选课、成绩、教务与校内服务", url: "https://one.tyut.edu.cn/tp_up/", tag: "校内" },
+    { name: "校园邮箱", desc: "学校邮箱登录（学生 / 教工）", url: "https://mail.tyut.edu.cn/", tag: "校内" },
+    { name: "图书馆", desc: "馆藏检索、数据库与借阅", url: "http://www.lib.tyut.edu.cn/", tag: "资源" },
+    { name: "研究生院", desc: "培养、学位与招生信息", url: "http://www.gs.tyut.edu.cn/", tag: "培养" },
+    { name: "四六级报名", desc: "全国大学英语四六级考试报名", url: "https://cet-bm.neea.cn/", tag: "考试" }
+  ],
+
   research: [
     {
       id: "ductile-iron",

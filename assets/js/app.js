@@ -568,6 +568,23 @@
     update();
   }
 
+  function renderQuickLinks() {
+    var holders = qsa("#quick-links");
+    if (!holders.length) return;
+    var links = DATA.quickLinks || [];
+    holders.forEach(function (holder) {
+      holder.innerHTML = links.map(function (item, index) {
+        return '<a class="quick-link reveal" href="' + item.url + '" target="_blank" rel="noopener" style="transition-delay:' + Math.min(index, 6) * 50 + 'ms">' +
+          '<span class="quick-tag">' + item.tag + "</span>" +
+          "<strong>" + item.name + "</strong>" +
+          "<span>" + item.desc + "</span>" +
+          '<span class="quick-arrow" aria-hidden="true">↗</span>' +
+        "</a>";
+      }).join("");
+    });
+    initReveal();
+  }
+
   function initNoticesPage() {
     var listHolder = qs("#notice-list");
     if (!listHolder) return;
@@ -892,6 +909,7 @@
     initPublicationsPage();
     initNewsPage();
     initNoticesPage();
+    renderQuickLinks();
 
     initReveal();
 
