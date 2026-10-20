@@ -20,6 +20,7 @@
 | 研究方向 | `research.html` | 4 个研究方向、研究路径 |
 | 团队成员 | `team.html` | 负责人、团队数据、研究小组、团队风采 |
 | 研究成果 | `publications.html` | 论文、项目、专利、著作、荣誉，支持筛选搜索 |
+| 对外开放 | `exchange.html` | 国际会议汇报（ICCES）、国际期刊代表作、合作版图、开放共享 |
 | 新闻动态 | `news.html` | 新闻中心、工作动态、通知公告、学术活动 |
 | 加入我们 / 联系 | `contact.html` | 联系方式、咨询表单、招生合作 |
 | 404 | `404.html` | 自定义 404 |
@@ -32,6 +33,7 @@
 ├── research.html
 ├── team.html
 ├── publications.html
+├── exchange.html
 ├── news.html
 ├── contact.html
 ├── 404.html
@@ -233,6 +235,7 @@ assets/css/style.css
 #team-groups
 #team-gallery
 #pubFilters
+#exchange-stats
 #pubSearch
 #pub-list
 #newsFilters
@@ -252,6 +255,7 @@ assets/css/style.css
 - 粒子背景、打字机
 - 研究方向、团队、成果、新闻、相册动态渲染
 - 成果按年份分组渲染（`.pub-year-sep` 为年份分隔标题，`.pub-item` 不再显示右侧年份）
+- 对外开放页数据条渲染（`#exchange-stats` ← `DATA.exchangeStats`）
 - 成果筛选和搜索
 - 新闻筛选和搜索
 - 相册与图书封面 lightbox（点击带 `data-full` 的元素放大）
@@ -397,7 +401,7 @@ https://jinshuaishuai0305.github.io/
 ## 7. 当前内容状态（2026-09-29）
 
 - 最近一次内容提交：`bba1532 Add additive manufacturing textbook with book covers`
-- 页面：7 个
+- 页面：8 个
 - 成果总数：`97`
   - 论文：`60`（2026 年 8 篇 / 2025 年 12 篇 / 2024 年 7 篇 / 2023 年 5 篇 / 2021 年 4 篇 / 2020 年 3 篇，其余见 `data.js`）
   - 项目：`9`
@@ -434,6 +438,12 @@ https://jinshuaishuai0305.github.io/
 ## 8. 更新日志
 
 ### 2026-09-29
+
+- 新增「对外开放」页 `exchange.html`：ICCES 大会汇报（现场照片、报告题目、单位、关键词、结论要点）、国际期刊 5 篇代表作（影响因子 + DOI）、合作版图、开放共享时间线、合作邀请
+- 导航 `NAV` 增加 `{ id: "exchange", label: "对外开放", href: "exchange.html" }`（位于研究成果与新闻动态之间），全站页头/页脚自动同步
+- `data.js` 新增 `exchangeStats`，`init()` 增加 `renderStats(qs("#exchange-stats"), DATA.exchangeStats)`
+- 新闻「课题组师生赴香港参加 ICCES 大会」的链接改为 `exchange.html`
+- `sitemap.xml` 增加 `exchange.html`
 
 - 新增著作《增材制造技术导论——原理与应用》（游志勇 主编，北京理工大学出版社，2025.1），并按封面更正《镁合金强韧化原理及技术》书名与作者信息
 - 两本图书封面压缩入 `assets/img/books/`，`data.js` 的 `books` 增加 `cover` 字段；`app.js` 的 `renderPublications()` 在 `.pub-side` 中渲染封面缩略图（`.pub-cover`），lightbox 的点击代理由 `.gallery-item` 放宽为 `[data-full]`

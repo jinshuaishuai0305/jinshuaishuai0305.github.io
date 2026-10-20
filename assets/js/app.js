@@ -12,6 +12,7 @@
     { id: "research", label: "研究方向", href: "research.html" },
     { id: "team", label: "团队成员", href: "team.html" },
     { id: "publications", label: "研究成果", href: "publications.html" },
+    { id: "exchange", label: "对外开放", href: "exchange.html" },
     { id: "news", label: "新闻动态", href: "news.html" },
     { id: "contact", label: "加入我们 / 联系", href: "contact.html" }
   ];
@@ -782,6 +783,7 @@
     initContactForm();
 
     renderStats(qs("#home-stats"), DATA.stats);
+    renderStats(qs("#exchange-stats"), DATA.exchangeStats);
     renderResearchCards(qs("#home-research"), 4);
     renderNewsCards(qs("#home-news"), 3);
     renderGallery(qs("#home-gallery"), 3);

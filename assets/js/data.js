@@ -19,6 +19,13 @@ window.SITE_DATA = {
     { value: 20, suffix: "+", label: "已毕业硕士" }
   ],
 
+  exchangeStats: [
+    { value: 22, suffix: "篇", label: "国际期刊英文论文" },
+    { value: 2, suffix: "项", label: "国际发明专利" },
+    { value: 1, suffix: "个", label: "院士工作站" },
+    { value: 4, suffix: "项", label: "产学研合作项目" }
+  ],
+
   research: [
     {
       id: "ductile-iron",
@@ -806,7 +813,7 @@ window.SITE_DATA = {
       category: "学术活动",
       title: "课题组师生赴香港参加 ICCES 大会",
       summary: "2026 年 8 月 7 日至 12 日，课题组师生赴香港参加 ICCES 大会，与国内外学者开展学术交流并展示课题组最新研究进展。",
-      link: "publications.html"
+      link: "exchange.html"
     },
     {
       date: "2026-09-01",
