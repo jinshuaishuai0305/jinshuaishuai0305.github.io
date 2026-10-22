@@ -503,6 +503,24 @@ window.SITE_DATA = {
     },
     {
       type: "paper",
+      year: 2012,
+      title: "Effect of Cu addition on microstructure and properties of Mg-10Zn-5Al-0.1Sb high zinc magnesium alloy",
+      authors: "You, Zhiyong; Zhang, Yuhua; Cheng, Weili",
+      venue: "China Foundry, 9(1), 43-47",
+      tags: ["Cu 添加", "高锌镁合金", "力学性能"],
+      link: "http://www.foundryworld.com/uploadfile/2012031349427637.pdf"
+    },
+    {
+      type: "paper",
+      year: 2012,
+      title: "Effect of Ce-rich rare earth on microstructure and mechanical properties of Mg-10Zn-5Al-0.1Sb magnesium alloy",
+      authors: "You, Zhiyong; Zhang, Zhaoguang; Zhang, Jinshan",
+      venue: "China Foundry, 9(2), 131-135",
+      tags: ["Ce 富集稀土", "Mg-10Zn-5Al-0.1Sb", "高锌镁合金"],
+      link: "http://www.foundryworld.com/uploadfile/2012053159997221.pdf"
+    },
+    {
+      type: "paper",
       year: 2011,
       title: "低过热度浇注SiCp/Gr/ZL101复合材料组织与性能研究",
       authors: "王卓; 卫英慧; 游志勇; 侯利锋",
