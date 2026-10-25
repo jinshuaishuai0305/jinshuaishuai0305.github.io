@@ -568,6 +568,48 @@
     update();
   }
 
+  function renderGraduates() {
+    var holder = qs("#graduates-list");
+    if (!holder) return;
+    var data = DATA.graduates || {};
+    var items = data.list || [];
+    var intro = qs("#graduates-intro");
+    if (intro && data.intro) intro.textContent = data.intro;
+
+    var groups = [];
+    items.forEach(function (item) {
+      var group = null;
+      for (var i = 0; i < groups.length; i++) {
+        if (groups[i].year === item.year) { group = groups[i]; break; }
+      }
+      if (!group) { group = { year: item.year, list: [] }; groups.push(group); }
+      group.list.push(item);
+    });
+    groups.sort(function (a, b) { return b.year - a.year; });
+
+    holder.innerHTML = groups.map(function (group) {
+      return '<div class="grad-group">' +
+        '<div class="grad-head"><span class="grad-year">' + group.year + " 届</span>" +
+        '<span class="grad-count">' + group.list.length + " 人</span></div>" +
+        '<div class="grad-grid">' +
+        group.list.map(function (student) {
+          return '<article class="grad-card reveal">' +
+            "<h3>" + student.name + "</h3>" +
+            (student.thesis
+              ? '<p class="grad-thesis">《' + student.thesis + "》</p>"
+              : '<p class="grad-thesis grad-empty">论文信息待补</p>') +
+            (student.field
+              ? '<div class="grad-tags">' + student.field.split("、").map(function (tag) {
+                  return '<span class="tag">' + tag.trim() + "</span>";
+                }).join("") + "</div>"
+              : "") +
+          "</article>";
+        }).join("") +
+        "</div></div>";
+    }).join("");
+    initReveal();
+  }
+
   function renderQuickLinks() {
     var holders = qsa("#quick-links");
     if (!holders.length) return;
@@ -910,6 +952,7 @@
     initNewsPage();
     initNoticesPage();
     renderQuickLinks();
+    renderGraduates();
 
     initReveal();
 

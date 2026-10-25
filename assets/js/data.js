@@ -1365,6 +1365,35 @@ window.SITE_DATA = {
     }
   ],
 
+  graduates: {
+    intro: "游志勇教授连续指导了 2016 届至 2026 届共 24 名研究生顺利毕业。",
+    list: [
+      { year: 2026, name: "韩嘉敏", thesis: "", field: "" },
+      { year: 2026, name: "孙春乐", thesis: "First-principles insights into the thermodynamic and mechanical behavior of the β-phase in Mg–Zn alloys: unveiling the underlying mechanisms", field: "第一性原理计算、镁合金" },
+      { year: 2026, name: "李兵", thesis: "", field: "" },
+      { year: 2026, name: "宋振洋", thesis: "A first principles study of the effect of Mo on Cr-containing carbides in carbidic austempered ductile iron", field: "第一性原理计算、特种铸铁" },
+      { year: 2025, name: "刘世龙", thesis: "基于响应面法的 3D 打印砂型空间网格工艺优化", field: "3D 打印、砂型工艺" },
+      { year: 2025, name: "王立波", thesis: "Study on the combined modification mechanism of P and Sr and microstructure control in hypereutectic Al–Si alloys", field: "铝合金复合变质" },
+      { year: 2025, name: "靳帅帅", thesis: "Mg2Ca 作为增强相的第一性原理研究", field: "第一性原理计算、材料微观机理" },
+      { year: 2025, name: "张腾", thesis: "SiC 颗粒促进球墨铸铁珠光体中 Fe3C 异质形核机理及其力学性能研究", field: "球墨铸铁" },
+      { year: 2024, name: "张梦军", thesis: "P 对过共晶 Al-Si 合金初生 Si 变质机理的研究", field: "铝合金变质机理" },
+      { year: 2024, name: "艾雨蒙", thesis: "基于砂型 3D 打印成形工艺优化制备薄壁叶轮铸件", field: "3D 打印、铸造工艺优化" },
+      { year: 2024, name: "牛城毅", thesis: "Mn 合金化及超高温热处理对 CADI 磨球组织和性能影响", field: "特种铸铁（CADI）" },
+      { year: 2024, name: "张云冠", thesis: "P 含量对复合变质过共晶 Al-Si-Cu-Mg 组织和性能影响", field: "铝合金变质处理" },
+      { year: 2023, name: "马振星", thesis: "单/双尺寸 SiCp 对 AZ91D 镁合金组织和性能的影响", field: "镁基复合材料" },
+      { year: 2023, name: "王彬", thesis: "挤压铸造参数对 B390 合金组织和性能的影响", field: "铝合金挤压铸造" },
+      { year: 2023, name: "于杰", thesis: "熔融浇注法制备可溶性盐芯的组织与性能", field: "先进铸造工艺（盐芯制备）" },
+      { year: 2022, name: "赵薛生", thesis: "化学镀 Ni-P 对挤压铸造固-液复合 Cu/Al 双合金界面的影响", field: "异种金属复合、界面调控" },
+      { year: 2022, name: "刘涛", thesis: "挤压成形及热处理对过共晶 Al-15Si 合金组织和性能的影响", field: "铝合金挤压成形与热处理" },
+      { year: 2021, name: "段状正", thesis: "热处理对挤压铸造 SiCp/ZL101 铝基复合材料组织与性能的影响", field: "铝基复合材料" },
+      { year: 2021, name: "乔岗平", thesis: "挤压速度对挤压铸造铝合金制动钳工艺的影响及数值模拟", field: "挤压铸造工艺、数值模拟" },
+      { year: 2020, name: "蒋傲雪", thesis: "挤压铸造 SiCp/AZ91D 镁基复合材料的组织与性能", field: "镁合金/镁基复合材料、半固态成形与析出强化" },
+      { year: 2019, name: "高晶磊", thesis: "等通道挤压对 Mg-6Zn-3Al 镁合金组织和性能的影响", field: "镁合金塑性变形" },
+      { year: 2018, name: "张拓", thesis: "T6 热处理对 Al+SiC 预制颗粒增强 ZL101/ZL101-Mg 基复合材料组织和力学性能影响的研究", field: "铝基复合材料" },
+      { year: 2017, name: "蔡来强", thesis: "热处理对 SiC 增强 YL117 复合材料组织和性能影响", field: "铝基复合材料、热处理" },
+      { year: 2016, name: "司耀强", thesis: "Microstructure and properties of mechanical alloying particles reinforced aluminum matrix composites prepared by semisolid stirring pouring method", field: "铝基复合材料" }
+    ]
+  },
   team: {
     pi: {
       name: "游志勇",
@@ -1403,7 +1432,7 @@ window.SITE_DATA = {
     stats: [
       { value: 2, suffix: "名", label: "在读博士研究生" },
       { value: 14, suffix: "名", label: "在读硕士研究生" },
-      { value: 20, suffix: "+", label: "已毕业硕士研究生" },
+      { value: 24, suffix: "名", label: "已毕业硕士研究生" },
       { value: 4, suffix: "个", label: "主要研究方向" }
     ],
     groups: [
