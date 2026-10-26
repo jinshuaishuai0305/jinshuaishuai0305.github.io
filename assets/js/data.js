@@ -500,7 +500,7 @@ window.SITE_DATA = {
       authors: "You, Zhiyong; Han, Lingcui; Wei, Yinghui",
       venue: "Applied Mechanics and Materials, 182-183, 456-461",
       tags: ["热耗计算", "半水石膏", "装备"],
-      link: ""
+      link: "https://www.scientific.net/AMM.182-183.456"
     },
     {
       type: "paper",
