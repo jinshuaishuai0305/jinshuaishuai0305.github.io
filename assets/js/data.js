@@ -1109,6 +1109,26 @@ window.SITE_DATA = {
   patents: [
     {
       type: "patent",
+      year: 2021,
+      title: "A Squeeze Casting Die for Alloy Direct Extrusion Molding",
+      authors: "You, Zhiyong; Jiang, Aoxue",
+      venue: "卢森堡发明专利 · LU102663 B1 · 申请 2021-03-17 · 授权 2021-09-17 · 专利权人：Taiyuan University of Technology",
+      tags: ["挤压铸造模具", "铝镁合金", "卢森堡专利", "未转化"],
+      cover: "assets/img/patents/lu-squeeze-casting-die-2021.png",
+      link: ""
+    },
+    {
+      type: "patent",
+      year: 2025,
+      title: "快速形成等轴晶粒的 Al-Mg 合金制备装置",
+      authors: "游志勇; 蒋傲雪; 张梦军; 王开鹰",
+      venue: "中国发明专利 · ZL 2022 1 1671106.5（CN 116237462 B）· 申请 2022-12-26 · 授权 2025-12-12 · 证书号 8570080 · 专利权人：太原理工大学",
+      tags: ["Al-Mg 合金", "等轴晶粒", "制备装置", "未转化"],
+      cover: "assets/img/patents/cn-al-mg-equiaxed-device-2025.png",
+      link: ""
+    },
+    {
+      type: "patent",
       year: 2024,
       title: "一种 Cu 和 Sb 联合原位自生的组织优化镁基复合材料及其制备方法",
       authors: "游志勇; 张金山",
