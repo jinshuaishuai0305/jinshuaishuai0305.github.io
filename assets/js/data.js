@@ -373,7 +373,7 @@ window.SITE_DATA = {
       authors: "张梦军; 游志勇; 张云冠; 艾雨蒙; 牛城毅; 牛晓峰",
       venue: "铸造, 72(11), 1391-1398",
       tags: ["铝硅合金", "数值模拟", "相场法", "元胞自动机"],
-      link: ""
+      link: "http://www.foundrynations.com/Public/Uploads/other_img/361782750655ebcc2011d1.pdf"
     },
     {
       type: "paper",
@@ -382,7 +382,7 @@ window.SITE_DATA = {
       authors: "刘涛; 游志勇; 赵薛生; 马振星; 于杰; 王彬",
       venue: "铸造, 71(10), 1235-1239",
       tags: ["过共晶 Al-Si 合金", "挤压铸造", "T6 热处理"],
-      link: ""
+      link: "http://www.foundrynations.com/Public/Uploads/other_img/812290336361fe7916db6.pdf"
     },
     {
       type: "paper",
@@ -463,7 +463,7 @@ window.SITE_DATA = {
       authors: "游志勇; 张鹏; 孙战; 蔡来强; 张拓",
       venue: "中国铸造装备与技术, (2), 11-13",
       tags: ["砂型 3D 打印", "刹车盘", "铸造工艺"],
-      link: ""
+      link: "https://cnki.com.cn/Article/CJFDTOTAL-ZZSB201702004.htm"
     },
     {
       type: "paper",
