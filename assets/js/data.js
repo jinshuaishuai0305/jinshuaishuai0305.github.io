@@ -491,7 +491,7 @@ window.SITE_DATA = {
       authors: "You, Zhiyong; Kang, Jingjing; Zhang, Wenbo; Zhang, Jinshan",
       venue: "China Foundry, 11(2), 103-106",
       tags: ["AZ61", "稀土 Pr", "力学性能"],
-      link: ""
+      link: "https://doaj.org/article/ccd527f11c6949ae938175154df7eff6"
     },
     {
       type: "paper",
