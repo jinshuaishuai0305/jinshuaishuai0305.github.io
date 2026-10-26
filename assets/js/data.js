@@ -473,7 +473,7 @@ window.SITE_DATA = {
       authors: "Si, Yao-qiang; You, Zhi-yong; Zhu, Jing-xin; Cai, Lai-qiang; Zhang, Jin-shan",
       venue: "China Foundry, 13(3), 176-181 · DOI: 10.1007/s41230-016-5097-8",
       tags: ["铝基复合材料", "半固态搅拌", "机械合金化颗粒"],
-      link: "https://doi.org/10.1007/s41230-016-5097-8"
+      link: "https://link.springer.com/article/10.1007/s41230-016-5097-8"
     },
     {
       type: "paper",
