@@ -1200,6 +1200,8 @@ window.SITE_DATA = {
   ],
 
   awards: [
+    { type: "award", year: 2025, title: "第 24 届全国 27 省（市、自治区）5 市 1 地区铸造学术会议邀请报告", authors: "第 24 届全国铸造学术会议组委会、山西省机械工业学会铸造专业委员会", venue: "2025 年 3 月 23 日 · 报告题目《基于砂型 3D 打印成形工艺优化制备薄壁叶轮铸件》", tags: ["邀请报告", "学术会议", "砂型 3D 打印"], cover: "assets/img/certs/invited-talk-foundry-congress-2025.png", link: "" },
+    { type: "award", year: 2025, title: "2025 中国结构材料大会邀请报告", authors: "2025 中国结构材料大会暨第十一届全国有色金属结构材料制备/加工及应用技术交流会组委会", venue: "2025 年 7 月 20 日 · 报告题目《Al2Ca/Mg 界面的第一性原理研究》", tags: ["邀请报告", "学术会议", "第一性原理"], cover: "assets/img/certs/invited-talk-structural-materials-2025.png", link: "" },
     { type: "award", year: 2025, title: "2025 年中国大学生机械工程创新创意大赛一等奖（指导教师）", authors: "中国机械工程学会", venue: "2025 年 7 月 10 日 · 铸造工艺设计赛 · 本科生组 · 作品“C件—导向连接体”", tags: ["国家级竞赛", "指导教师", "铸造工艺"], cover: "assets/img/certs/meicc-2025-first-prize.png", link: "" },
     { type: "award", year: 2025, title: "2025 年中国大学生机械工程创新创意大赛铸造工艺设计赛优秀指导教师奖", authors: "铸造工艺设计赛执行委员会、中国机械工程学会铸造分会（代章）", venue: "2025 年 7 月 · 指导太原理工大学参赛团队成绩优异", tags: ["国家级竞赛", "优秀指导教师"], cover: "assets/img/certs/meicc-2025-excellent-instructor.png", link: "" },
     { type: "award", year: 2024, title: "校“三育人”先进个人", authors: "太原理工大学", venue: "2024 年", tags: ["校级荣誉"], link: "" },
