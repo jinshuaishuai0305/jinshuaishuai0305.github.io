@@ -1109,6 +1109,16 @@ window.SITE_DATA = {
   patents: [
     {
       type: "patent",
+      year: 2026,
+      title: "一种挤压铸造过共晶铝硅合金材料的制备方法",
+      authors: "游志勇; 张云冠",
+      venue: "中国发明专利 · ZL 2023 1 1766269.6（授权公告号 CN 117737484 B）· 申请 2023-12-21 · 授权 2026-05-26 · 证书号 8968155 · 专利权人：太原理工大学",
+      tags: ["过共晶铝硅合金", "挤压铸造", "制备方法", "未转化"],
+      cover: "assets/img/patents/cn-hypereutectic-alsi-squeeze-cast-2026.png",
+      link: ""
+    },
+    {
+      type: "patent",
       year: 2021,
       title: "A Squeeze Casting Die for Alloy Direct Extrusion Molding",
       authors: "You, Zhiyong; Jiang, Aoxue",
